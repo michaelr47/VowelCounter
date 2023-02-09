@@ -1,5 +1,6 @@
 const input = document.getElementById('inputField');
 const checkBtn = document.getElementById('checkButton');
+const h1 = document.createElement('h1');
 
 checkBtn.addEventListener('click', () => {
     if (!input.value) {
@@ -17,10 +18,10 @@ checkBtn.addEventListener('click', () => {
         }
         
     }
-    const h1 = document.createElement('h1');
     
-    if (counter === 0) return 'no vowels found';
-    h1.innerText = `There are ${counter} ${counter > 1 ? 'vowels' : 'vowel'}!`;
+    h1.innerText = '';
+    h1.innerText = `There ${counter > 1 ? 'are' : 'is'} ${counter} ${counter > 1 ? 'vowels' : 'vowel'}!`;
+    if (counter === 0) h1.innerText = 'no vowels found';
     document.body.append(h1);
     clearInputField();
 })
