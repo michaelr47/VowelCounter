@@ -2,3 +2,36 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
 }
+
+.modal {
+    background: rgba(0, 0, 0, .4);
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: none;
+    display: none;
+}
+
+.buttonCont {
+    text-align: right;
+    margin: 5px;
+} 
+.modalCont {
+    margin: 14rem auto;
+    width: 30%;
+    height: 10rem;
+    padding: 2rem;
+    background-color: #f0f0f0;
+    border: 1px solid black;
+    border-radius: 15px;
+   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .6);
+
+}
+.mainModalText {
+    text-align: center;
+    /* padding: 20px; */
+
+}
