@@ -27,7 +27,7 @@ checkBtn.addEventListener('click', () => {
     
     h2.innerHTML = `There ${counter > 1 ? 'are' : 'is'} ${counter} ${counter > 1 ? 'vowels' : 'vowel'}!`;
     
-    if (counter === 0) h2.innerText = 'no vowels found';
+    if (counter === 0) h2.innerText = 'no vowels found!';
     modalText.innerText = '';
     modalText.append(h2);
 
@@ -49,4 +49,3 @@ const closeModalContent = (closeModal) => {
 }
 
 const clearInputField = () => input.value = '';
-    
