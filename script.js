@@ -1,10 +1,13 @@
-const input = document.getElementById('inputField');
 const checkBtn = document.getElementById('checkButton');
+const input = document.getElementById('inputField');
 const modal = document.getElementById('modal');
-const modalText = document.getElementById('vowelText');
-const h2 = document.createElement('h2');
+
 const closeModal = document.getElementById('closeModal');
+
 checkBtn.addEventListener('click', () => {
+    const modalText = document.getElementById('vowelText');
+    const h2 = document.createElement('h2');
+
     if (!input.value) {
         input.placeholder = 'Please type here';   
     }
@@ -26,7 +29,7 @@ checkBtn.addEventListener('click', () => {
     h2.innerText = `There ${counter > 1 ? 'are' : 'is'} ${counter} ${counter > 1 ? 'vowels' : 'vowel'}!`;
     if (counter === 0) h2.innerText = 'no vowels found';
     modalText.append(h2);
-    clearInputField();
+    clearInputField()
     closeModalContent(modal);
 })
 
@@ -34,9 +37,13 @@ const closeModalContent = (closeModal) => {
     closeModal.addEventListener('click', () => {
         modal.style.display = 'none';
     }) 
+    
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
 }
 
-const clearInputField = () => { 
-    input.value = '';
+const clearInputField = () => input.value = '';
     
-}
