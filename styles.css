@@ -28,10 +28,30 @@ body {
     border: 1px solid black;
     border-radius: 15px;
    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .6);
+   animation: topDown .4s ease-in;
 
 }
-.mainModalText {
-    text-align: center;
-    /* padding: 20px; */
+.mainModalText { text-align: center; }
 
+@keyframes topDown {
+    0% {
+        opacity: .1;
+        top: 1px;
+    }
+    25% {
+        opacity: .4;
+        top: 50px;
+    }
+    50% {
+        opacity: .6;
+        top: 100px;
+    }
+    75% {
+        opacity: .8;
+        top: 150px;
+    }
+    100% {
+        opacity: 1;
+        top: 224px;
+    } 
 }
