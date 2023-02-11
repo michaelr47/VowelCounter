@@ -28,7 +28,7 @@ body {
     border: 1px solid black;
     border-radius: 15px;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, .6);
-    animation: topDown .4s ease;
+    animation: topDown .5s ease;
 
 
 }
@@ -36,27 +36,11 @@ body {
 
  @keyframes topDown {
     0% {
-        opacity: .1;
-     
+        opacity: .2;
+        transform: translateY(-400px);
     }
-    25% {
-        opacity: .4;
-      
-
-    }
-    50% {
-        opacity: .6;
-       
-
-    }
-    75% {
-        opacity: .8;
-       
-
-    }
-    100% {
-        opacity: 1;
-       
-
-    } 
+    25% { opacity: .4;}
+    50% { opacity: .6; }
+    75% {opacity: .8; }
+    100% { opacity: 1; } 
 } 
